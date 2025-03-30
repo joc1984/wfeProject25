@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraria Online - Adicionar/Editar Livro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="jonathan_booksFunction.js"></script>
+</head>
+<body>
+    <div class="container mt-4">
+        <h2 class="mt-4">Adicionar/Editar Livro</h2>
+        <div id="frm" class="row mt-3">
+            <div class="col-12">
+                <label for="Titulo">Título:</label>
+                <input type="text" class="form-control" id="Titulo"/>
+            </div>
+            <div class="col-12">
+                <label for="Autor">Autor:</label>
+                <input type="text" class="form-control" id="Autor"/>
+            </div>
+            <div class="col-12">
+                <label for="Genero">Género:</label>
+                <input type="text" class="form-control" id="Genero"/>
+            </div>
+            <div class="col-12">
+                <label for="Editora">Editora:</label>
+                <input type="text" class="form-control" id="Editora"/>
+            </div>
+            <div class="col-12">
+                <label for="Ano">Ano:</label>
+                <input type="text" class="form-control" id="Ano"/>
+            </div>
+            <div class="col-12 mt-3">
+                <button id="btnGuardar" class="btn btn-primary">Guardar</button>
+                <a href="jonathan_onlineLibrary.html" class="btn btn-secondary ms-2">Voltar</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var livroIndex = -1; // Variável para identificar se estamos criando ou editando um livro
+
+        $(document).ready(function() {
+            // Verificar se existe um ID na URL para edição
+            var strUrl = window.location.href;
+            var url = new URL(strUrl);
+            var params = url.searchParams;
+
+            livroIndex = params.get('id'); // Obter o ID do livro
+
+            if (livroIndex !== null && livroIndex !== undefined) {
+                // Se houver ID, carregamos os dados do livro para editar
+                var livro = livros[livroIndex];
+                $("#Titulo").val(livro.Titulo);
+                $("#Autor").val(livro.Autor);
+                $("#Genero").val(livro.Genero);
+                $("#Editora").val(livro.Editora);
+                $("#Ano").val(livro.Ano);
+
+                // Alterar o texto do botão para "Atualizar"
+                $("#btnGuardar").text("Atualizar");
+            }
+        });
+
+        // Função de Guardar (para adicionar ou editar)
+        $("#btnGuardar").click(function() {
+            var titulo = $("#Titulo").val();
+            var autor = $("#Autor").val();
+            var genero = $("#Genero").val();
+            var editora = $("#Editora").val();
+            var ano = $("#Ano").val();
+
+            // Criar ou atualizar o livro
+            var livro = new Livro(titulo, autor, genero, editora, ano);
+
+            if (livroIndex === null || livroIndex === -1) {
+                // Adicionar novo livro
+                livros.push(livro);
+            } else {
+                // Editar livro existente
+                livros[livroIndex] = livro;
+            }
+
+            // Guardar livros no localStorage
+            localStorage.setItem("livros", JSON.stringify(livros));
+
+            alert(livroIndex === null || livroIndex === -1 ? "O livro foi adicionado!" : "O livro foi atualizado!");
+
+            // Redirecionar para a lista de livros
+            window.location.href = "jonathan_onlineLibrary.html";
+        });
+    </script>
+</body>
+</html>
