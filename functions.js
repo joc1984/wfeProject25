@@ -1,4 +1,4 @@
-// Carga dinámica del contenido del modal de login
+// Dynamic login modal loading
 document.addEventListener("DOMContentLoaded", function () {
     const loginModal = document.getElementById("loginModal");
   
@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
       loginModal.addEventListener("show.bs.modal", function () {
         const modalContent = document.getElementById("loginModalContent");
         if (modalContent) {
-          fetch("dev_login.html")
+          fetch("log_SignIn.html")
             .then(response => response.text())
             .then(html => {
               modalContent.innerHTML = html;
@@ -19,4 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   });
-  
+
+
+

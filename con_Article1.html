@@ -3,39 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Libraries, frameworks and functions -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> 
-    <script src="JSfunctions_wfe25.js"></script>
-    <link rel="stylesheet" href="stylesheet_wfe25.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="functions.js"></script>
     <!-- Meta Tags for SEO -->
     <title>Fake Analytics | Data over lies</title>
-    <meta name="description" content="Fake Analytics delivers cutting-edge insights into fake news trends, misinformation analysis, and data-driven investigations. Explore how analytics can reveal the truth behind digital deception."    >
+    <meta name="description" content="Fake Analytics delivers cutting-edge insights into fake news trends, misinformation analysis, and data-driven investigations. Explore how analytics can reveal the truth behind digital deception.">
+    <meta name="google-site-verification" content="myGoogleSearchConsole_exampleTag123">
     <link rel="canonical" href="https://www.fakeanalytics.com/">
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-IADE1234');
+      </script>
 </head>
+
 <body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-IADE1234"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>  
+  <!-- Header -->
     <header>
         <div class="container">
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <!-- Navigation menu -->
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li><img src="Imags/logo v1.webp" width="40" height="32" alt="Logo"></li>
-              <li><a href="#" class="nav-link px-3 inactive">Home</a></li>
-              <li><a href="#" class="nav-link px-3 active">News</a></li>
-              <li><a href="#" class="nav-link px-3 inactive">Verify</a></li>
-              <li><a href="#" class="nav-link px-3 inactive">Community</a></li>
-              <li><a href="#" class="nav-link px-3 inactive">About</a></li>
+             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><img src="Imags/logo v1.webp" width="50" height="95%" alt="Logo"></li>
+              <li><a href="main_homepage.html" class="nav-link px-3 inactive">Home</a></li>
+              <li><a href="main_news.html" class="nav-link px-3 active">News</a></li>
+              <li><a href="main_verify.html" class="nav-link px-3 inactive">Verify</a></li>
+              <li><a href="main_community.html" class="nav-link px-3 inactive">Community</a></li>
+              <li><a href="main_about.html" class="nav-link px-3 inactive">About</a></li>
             </ul>
-            <!-- Search bar -->
-            <form class="search-form" role="search">
+            <!-- Search bar & Signin button -->
+            <div class="py-2 d-flex">
+              <form class="me-2" role="search">
               <input type="search" class="search-input" placeholder="Search..." aria-label="Search">
-            </form>
-            <!-- Signin module -->
-            <div class="text-end">
-              <button type="button" class="btn btn-outline-light me-2">Login</button>
-              <button type="button" class="btn btn-warning">Sign-up</button>
+              </form>
+              <div class="text-end">
+              <button type="button" class="btn-login" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+              <!-- Modal base -->
+                <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content" id="loginModalContent">
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -46,8 +69,8 @@
         <div class="ps-5 py-4 col-md-8">
           <article class="blog-post">
             <h2 class="display-5 link-body-emphasis mb-1">A veracity blackout</h2>
-            <p class="blog-post-meta">May 3, 2024 by <a href="#">Jonathan Castillo</a></p>    
-            <img src="Imags/ricardo-iv-tamayo-ZFqr-DgI-jU-unsplash.jpg" class="img-fluid mb-4">
+            <p class="blog-post-meta">May 3, 2024 by <a href="/con_Authors.html">Jonathan Castillo</a></p>    
+            <img src="Imags/ricardo-iv-tamayo-ZFqr-DgI-jU-unsplash.jpg" class="img-fluid mb-4" loading="lazy">
             <p>On Monday, April 29, 2024, Spain and Portugal were hit by a massive and sudden power outage that affected millions across the Iberian Peninsula. But while technicians worked to restore the power grid, another invisible threat surged through social media and messaging apps: fake news.</p>
             <p>Shortly after the blackout began around midday, unverified rumors began circulating online. Some posts falsely claimed that the power failure was the result of a cyberattack from a foreign government, sparking fears of international conflict. Others went further, suggesting that the outage was a prelude to a broader emergency or even a military operation. Despite lacking any official confirmation, these narratives spread rapidly on platforms like X (formerly Twitter), Facebook, and Telegram.</p>
             <p>One particularly viral post claimed that NATO forces were being mobilized in response to the outage — a claim quickly denied by both the Spanish and Portuguese defense ministries. Another conspiracy theory alleged that the blackout had been orchestrated by the governments themselves to test population reactions to crisis scenarios, echoing long-standing “deep state” rhetoric seen in global conspiracy circles.</p>
@@ -65,41 +88,41 @@
           <div>
             <h4 class="fst-italic">Recent posts</h4>
             <ul class="list-unstyled">
-              <li>
-                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
-                  <img src="Imags/ricardo-iv-tamayo-ZFqr-DgI-jU-unsplash.jpg" class="bd-placeholder-img" width="100%" height="85%" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#777"></rect></img>
-                  <div class="col-lg-8">
-                    <h6 class="mb-0">A veracity blackout</h6>
-                    <small class="text-body-secondary">May 3, 2025</small>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
-                  <img src="Imags/ryoji-iwata-_dVxl4eE1rk-unsplash.jpg" class="bd-placeholder-img" width="100%" height="85%" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#777"></rect></img>
-                  <div class="col-lg-8">
-                    <h6 class="mb-0">Drowning on infoxication</h6>
-                    <small class="text-body-secondary">November 11, 2024</small>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
-                  <img src="Imags/julien-riedel-alGtgU3MQu4-unsplash.jpg" class="bd-placeholder-img" width="100%" height="85%" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#777"></rect></img>
-                  <div class="col-lg-8">
-                    <h6 class="mb-0">The Covid-19 Infodemic</h6>
-                    <small class="text-body-secondary">July 15, 2024</small>
-                  </div>
-                </a>
-              </li>
+            <li>
+              <a class="d-flex flex-row gap-3 align-items-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <img src="Imags/ricardo-iv-tamayo-ZFqr-DgI-jU-unsplash.jpg" class="bd-placeholder-img" style="width: 120px; height: auto; object-fit: cover;">
+                <div class="flex-grow-1">
+                  <h6 class="mb-0">A veracity blackout</h6>
+                  <small class="text-body-secondary">May 3, 2025</small>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex flex-row gap-3 align-items-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <img src="/Imags/ryoji-iwata-_dVxl4eE1rk-unsplash.jpg" class="bd-placeholder-img" style="width: 120px; height: auto; object-fit: cover;">
+                <div class="flex-grow-1">
+                  <h6 class="mb-0">Drowning on information</h6>
+                  <small class="text-body-secondary">November 11, 2024</small>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex flex-row gap-3 align-items-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <img src="Imags/andrea-cau-nV7GJmSq3zc-unsplash.jpg" class="bd-placeholder-img" style="width: 120px; height: auto; object-fit: cover;">
+                <div class="flex-grow-1">
+                  <h6 class="mb-0">The Covid-19 infodemic</h6>
+                  <small class="text-body-secondary">July 15, 2024</small>
+                </div>
+              </a>
+            </li>
             </ul>
           </div>
         </div>
       </div>
       </div>
-      
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Fake Analytics. All rights reserved.</p>
     </footer>
+</body>
 

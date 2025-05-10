@@ -272,3 +272,17 @@ footer {
   text-decoration: underline;
 }
 
+/* News */
+
+.news-img {
+  transition: transform 0.3s ease;
+}
+.news-img:hover {
+  transform: scale(1.05);
+}
+.card-title {
+  font-weight: bold;
+}
+.card-text.small {
+  color: #6c757d;
+}
