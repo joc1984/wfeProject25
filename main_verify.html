@@ -122,33 +122,36 @@
     
           // HTML del resultado
           const resultHtml = `
-            <section class="analysis-result d-flex">
-              <div class="result-thumbnail">
-                <img src="placeholder-thumbnail.jpg" alt="Document Thumbnail" />
-              </div>
-              <div class="result-content">
+          <section class="analysis-result d-flex">
+            <div class="result-thumbnail">
+              <img src="Imags/ben-o-bro-wpU4veNGnHg-unsplash.jpg" alt="Document Thumbnail" />
+            </div>
+            <div class="result-content d-flex-column">
+              <div class="top-info">
                 <h2 class="result-title">${fileName}</h2>
                 <p class="result-meta">Uploaded by ${userName} · ${dateString} · ${timeString}</p>
                 <div class="fakeability-score">
                   <span class="score-label">Fakeability Score:</span>
                   <span class="score-value">82%</span>
                 </div>
-                <div class="indicators">
-                  <div class="indicator">
-                    <strong>Disinformation:</strong> Some statements are not supported by credible evidence.
-                  </div>
-                  <div class="indicator">
-                    <strong>Source Authority:</strong> The source has low to moderate reliability.
-                  </div>
-                  <div class="indicator">
-                    <strong>Sensationalism:</strong> The language used is emotionally charged.
-                  </div>
-                  <div class="indicator">
-                    <strong>Context:</strong> Some quotes or data are taken out of context.
-                  </div>
+              </div>
+              <div class="indicators">
+                <div class="indicator">
+                  <strong>Disinformation:</strong> Some statements are not supported by credible evidence.
+                </div>
+                <div class="indicator">
+                  <strong>Source Authority:</strong> The source has low to moderate reliability.
+                </div>
+                <div class="indicator">
+                  <strong>Sensationalism:</strong> The language used is emotionally charged.
+                </div>
+                <div class="indicator">
+                  <strong>Context:</strong> Some quotes or data are taken out of context.
                 </div>
               </div>
-            </section>
+            </div>
+          </section>
+
           `;
     
           // Inyectar el resultado en el contenedor

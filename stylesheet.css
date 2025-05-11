@@ -286,3 +286,48 @@ footer {
 .card-text.small {
   color: #6c757d;
 }
+
+/* COMMUNITY VISUAL ELEMENTS */
+
+#share-popup {
+  min-width: 160px;
+  max-width:100%;
+  transition: opacity 0.2s ease;
+}
+
+
+.share-popup {
+  display: flex;
+  gap: 10px; /* Espaciado entre los elementos */
+  align-items: center; /* Alinea verticalmente los elementos */
+  justify-content: center; /* Alinea los elementos horizontalmente */
+}
+
+.share-popup a, .share-popup button {
+  display: inline-flex; /* Asegura que los elementos se alineen correctamente */
+  align-items: center; /* Alinea los iconos verticalmente */
+  justify-content: center; /* Alinea los iconos horizontalmente */
+  width: 35px; /* Establece un tamaño fijo para cada icono */
+  height: 35px; /* Establece un tamaño fijo para cada icono */
+  padding: 0; /* Elimina el padding adicional */
+  margin: 0; /* Elimina el margen adicional */
+  border-radius: 50%; /* Hace que los botones sean circulares */
+  cursor: pointer; /* Cambia el cursor cuando se pasa por encima */
+}
+
+
+.copy-link {
+  width: 35px; /* Igual al tamaño de los otros iconos */
+  height: 35px; /* Igual al tamaño de los otros iconos */
+  display: inline-flex; /* Asegura el mismo comportamiento que los enlaces */
+  align-items: center;
+  justify-content: center;
+  background: none; /* Elimina el fondo del botón */
+  padding: 0; /* Elimina cualquier relleno extra */
+  margin: 0; /* Elimina cualquier margen extra */
+  cursor: pointer; /* Cursor pointer para interactividad */
+}
+
+.copy-link i {
+  font-size: 1.2rem; /* Ajusta el tamaño del icono */
+}
