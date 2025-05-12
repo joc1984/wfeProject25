@@ -331,3 +331,10 @@ footer {
 .copy-link i {
   font-size: 1.2rem; /* Ajusta el tamaño del icono */
 }
+
+a.hashtag-link:hover {
+  color: black; /* o cualquier otro color llamativo */
+  font-weight: bold;
+  transition: all 0.3s ease-in;
+  text-decoration: underline;
+}
