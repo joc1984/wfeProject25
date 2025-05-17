@@ -37,8 +37,7 @@
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <!-- Navigation menu -->
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li><img src="Imags/logo v1.webp" width="50" height="95%" alt="Logo"></li>
-              <li><a href="main_homepage.html" class="nav-link px-3 inactive">Home</a></li>
+              <li><a href="/main_homepage.html"><img src="Imags/logo v1.webp" width="50" height="95%" alt="Logo"></a></li>
               <li><a href="main_news.html" class="nav-link px-3 inactive">News</a></li>
               <li><a href="main_verify.html" class="nav-link px-3 inactive">Verify</a></li>
               <li><a href="main_community.html" class="nav-link px-3 inactive">Community</a></li>
@@ -70,7 +69,7 @@
       <div class="row align-items-center">
         <!-- Visual element -->
         <div class="col-md-6 mb-4 mb-md-0 text-center">
-          <img src="Imags/ben-o-bro-wpU4veNGnHg-unsplash.jpg" alt="Data Visualization" class="img-fluid" style="max-height: 300px;">
+          <img src="Imags/ben-o-bro-wpU4veNGnHg-unsplash.jpg" alt="Data Visualization" class="about-image img-fluid">
         </div>
 
         <!-- Text content -->
@@ -101,71 +100,45 @@
       </form>
     </div>
 
+  <!-- Newsletters Modal -->
+  <div class="modal fade" id="subscriptionModal" tabindex="-1" aria-labelledby="subscriptionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center">
+        <div class="modal-header">
+          <h5 class="modal-title" id="subscriptionModalLabel">Subscription Confirmed</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          Thank you for subscribing! You’ll now receive updates in your inbox.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="duplicateModal" tabindex="-1" aria-labelledby="duplicateModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center">
+        <div class="modal-header">
+          <h5 class="modal-title" id="duplicateModalLabel">Already Subscribed</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          This email is already subscribed.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
     <footer>
         <p>&copy; 2025 Fake Analytics. All rights reserved.</p>
     </footer>
 
-<!-- ✅ Modal de éxito -->
-<div class="modal fade" id="subscriptionModal" tabindex="-1" aria-labelledby="subscriptionModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-center">
-      <div class="modal-header">
-        <h5 class="modal-title" id="subscriptionModalLabel">Subscription Confirmed</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        Thank you for subscribing! You’ll now receive updates in your inbox.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ❌ Modal de duplicado -->
-<div class="modal fade" id="duplicateModal" tabindex="-1" aria-labelledby="duplicateModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-center">
-      <div class="modal-header">
-        <h5 class="modal-title" id="duplicateModalLabel">Already Subscribed</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        This email is already subscribed.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
 </body>
-<!-- ✅ Script de control -->
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("newsletterForm");
-    const emailInput = document.getElementById("newsletterEmail");
-
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const email = emailInput.value.trim().toLowerCase();
-
-      if (!email) return;
-
-      let subscribers = JSON.parse(localStorage.getItem("subscribers")) || [];
-
-      if (subscribers.includes(email)) {
-        const duplicateModal = new bootstrap.Modal(document.getElementById("duplicateModal"));
-        duplicateModal.show();
-      } else {
-        subscribers.push(email);
-        localStorage.setItem("subscribers", JSON.stringify(subscribers));
-        const subscriptionModal = new bootstrap.Modal(document.getElementById("subscriptionModal"));
-        subscriptionModal.show();
-        emailInput.value = "";
-      }
-    });
-  });
-</script>
+</html>

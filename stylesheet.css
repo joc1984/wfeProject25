@@ -1,4 +1,4 @@
-/* Website style pattern*/ 
+/* Design Pattern */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,6 +6,7 @@ body {
     background-color: #f7e2f7;
     color: black;
 }
+
 header {
     display: flex;
     justify-content: space-between;
@@ -14,327 +15,494 @@ header {
     padding: 15px;
     color: white;
 }
+
 footer {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  background-color: #800080;
-  padding: 15px;
-  color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #800080;
+    padding: 15px;
+    color: white;
 }
 
-/* Navigation menu */
+/* Navigation */
 .nav-link.active {
     color: #f0bf1e;
     font-weight: bold;
-  }
+}
 .nav-link.inactive {
     color: white;
-} 
+}
 .nav-link.inactive:hover {
     color: #e9d491; 
-  }
+}
 
 /* Search bar */
-  .search-form {
+.search-form {
     width: 100%;
     margin-bottom: 1rem;
-  }    
-  .search-input {
+}
+.search-input {
     background-color: white; 
     color: black;
     border: 1px solid #555;
     padding: 0.375rem 0.75rem;
     border-radius: 0.25rem;
     width: 100%;
-  }
-  .search-input::placeholder {
+}
+.search-input::placeholder {
     font-size: 0.85rem;
     color: #ccc;
-  }
+}
 
 /* Login button */
 .btn-login {
-  background-color: #f0bf1e; 
-  color: #000;               
-  border: none;
-  border-radius: 5px;       
-  height: 37px;
-  padding: 0 1rem;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
+    background-color: #f0bf1e; 
+    color: #000;               
+    border: none;
+    border-radius: 5px;       
+    height: 37px;
+    padding: 0 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
 }
-
 .btn-login:hover {
-  background-color: #e0a800; 
+    background-color: #e0a800; 
 }
 
-/* Verification bar */
+/* Verify Uploading */
 .upload-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh - 80px); 
-  background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px); 
+    background-color: #ffffff;
 }
 .upload-form {
-  width: 100%;
-  max-width: 600px;
-  border: 1px solid #ddd;
-  border-radius: 30px;
-  padding: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  background-color: #f9f9f9;
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    padding: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    background-color: #f9f9f9;
 }
-
 .upload-input {
-  flex: 1;
-  border: none;
-  background-color: transparent;
-  padding: 10px 16px;
-  font-size: 16px;
-  outline: none;
+    flex: 1;
+    border: none;
+    background-color: transparent;
+    padding: 10px 16px;
+    font-size: 16px;
+    outline: none;
 }
-
 .upload-btn {
-  border: none;
-  background-color: #800080;
-  color: white;
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    border: none;
+    background-color: #800080;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-
 .upload-btn:hover {
-  background-color: #0056b3;
+    background-color: #0056b3;
 }
 
-  
+/* Analysis Output */
 .analysis-result {
-  margin-top: 40px;
-  padding: 20px;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    background-color: #ffffff;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+    font-family: sans-serif;
 }
-
-/* Thumbnail */
-.result-thumbnail {
-  width: 30%;
-  max-width: 200px;
-  margin-right: 20px;
+.top-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
 }
-
 .result-thumbnail img {
-  width: 100%;
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+.top-info {
+    flex: 1;
+}
+.result-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.result-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 16px;
+}
+.fakeability-score {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+.score-label {
+    font-weight: 500;
+    color: #333;
+}
+.score-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #d9534f;
+    margin-left: 10px;
+}
+.indicators {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    font-size: 1rem;
+    color: #444;
+}
+
+/* News Cards */
+.card {
+    padding: 16px;
+    background-color: rgba(252, 223, 167, 0.4);
+    border-radius: 5px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+.card-title {
+    font-weight: bold;
+}
+.card-text.small {
+    color: #6c757d;
+}
+.news-img {
+    transition: transform 0.3s ease;
+}
+.news-img:hover {
+    transform: scale(1.05);
+}
+
+/* Analysis card */
+.analysis-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease;
+}
+.analysis-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.score-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #f0bf1e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #000;
+}
+.card-footer {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Custom modal */
+.custom-modal {
+    background-color: #800080;
+    color: white;
+    border-radius: 0.4rem;
+    padding: 2rem;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.custom-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.custom-modal-title {
+    font-size: 1.5rem;
+    margin: 0;
+}
+.custom-close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    background-color: #f7e2f7;
+    color: black;
+}
+.login-button {
+    width: 100%;
+    padding: 0.6rem;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 0.25rem;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.login-button:hover {
+    background-color: #e0a800;
+}
+.login-links {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+.login-links a {
+    display: block;
+    margin-top: 0.5rem;
+    color: white;
+    text-decoration: none;
+}
+.login-links a:hover {
+    text-decoration: underline;
+}
+
+/* Social Elements */
+#share-popup {
+    min-width: 160px;
+    max-width: 100%;
+    transition: opacity 0.2s ease;
+}
+.share-popup {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.share-popup a,
+.share-popup button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.popup {
+  width: 110px;
+  position: absolute;
+  bottom: 40px;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.popup-toast {
+  display: none;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1100;
+}
+.copy-link {
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+.copy-link i {
+    font-size: 1.2rem;
+}
+a.hashtag-link:hover {
+    color: black;
+    font-weight: bold;
+    transition: all 0.3s ease-in;
+    text-decoration: underline;
+}
+
+
+/* Other Content Elements*/
+.sidebar-sticky {
+  top: 2rem;
+}
+
+.post-thumb {
+  width: 120px;
   height: auto;
-  border-radius: 8px;
   object-fit: cover;
 }
 
-/* Content */
-.result-content {
-  flex: 1;
+.author-img {
+  max-width: 150px;
 }
 
-/* Título del archivo */
-.result-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 4px;
+.featured-img {
+  display: block;
+  margin-left: 20px; 
+  margin-right: auto;
+  max-width: 93.5%;
+  width: 95%;
+  height: auto;
+  max-height: 400px; 
+  object-fit: cover;
+  border-radius: 0.5rem; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
 }
 
-/* Metadata */
-.result-meta {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 16px;
-}
-
-/* Fakeability Score */
-.fakeability-score {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.score-label {
-  font-weight: 500;
-  color: #333;
-}
-
-.score-value {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #d9534f;
-  margin-left: 10px;
-}
-
-/* Indicadores */
-.indicators .indicator {
-  margin-bottom: 12px;
+.text-container {
+  max-width: 95ch; 
+  margin: 0 auto;  
+  line-height: 1.6;
   font-size: 1rem;
-  color: #444;
 }
 
-/* Cartas de las noticias */
-.card{
-  padding: 16px;
-  background-color: rgba(252, 223, 167, 0.4);
-  border: 1px semi-solid;
-  border-radius: 5px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+.upload-wrapper {
+  max-width: 600px;
 }
 
-/* Modal general */
-.custom-modal {
-  background-color: #800080;
-  color: white;
-  border-radius: 0.4rem;
-  padding: 2\rem;
-  max-width: 400px;
-  margin: auto;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-
-/* Cabecera */
-.custom-modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-.custom-modal-title {
-  font-size: 1.5rem;
-  margin: 0;
-}
-
-.custom-close-btn {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.form-group input {
+.last-verifications-container {
+  top: 2rem;
+  max-width: 800px;
   width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  background-color: #f7e2f7;
-  color: black;
 }
 
-/* Botón */
-.login-button {
+.verification-thumbnail {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.about-image {
+  max-height: 300px;
+}
+
+
+
+/* Carousel */
+.carousel-img {
   width: 100%;
-  padding: 0.6rem;
-  background-color: #ffc107;
-  border: none;
-  border-radius: 0.25rem;
-  color: black;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  height: 500px;
+  object-fit: cover;
+  position: relative;
+  filter: brightness(0.9);
 }
 
-.login-button:hover {
-  background-color: #e0a800;
-}
-
-/* Links */
-.login-links {
-  margin-top: 1.5rem;
+.carousel-caption-custom {
+  background-color: #80008066;
+  padding: 2rem;
+  border-radius: 1rem;
+  position: absolute;
+  bottom: 10%; 
+  left: 10%;
+  right: 10%;
   text-align: center;
+  animation: fadeInUp 0.5s ease-in-out;
 }
 
-.login-links a {
-  display: block;
-  margin-top: 0.5rem;
+.carousel-caption-custom h2,
+.carousel-caption-custom p {
   color: white;
-  text-decoration: none;
-}
-
-.login-links a:hover {
-  text-decoration: underline;
-}
-
-/* News */
-
-.news-img {
-  transition: transform 0.3s ease;
-}
-.news-img:hover {
-  transform: scale(1.05);
-}
-.card-title {
   font-weight: bold;
-}
-.card-text.small {
-  color: #6c757d;
-}
-
-/* COMMUNITY VISUAL ELEMENTS */
-
-#share-popup {
-  min-width: 160px;
-  max-width:100%;
-  transition: opacity 0.2s ease;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); 
 }
 
 
-.share-popup {
+
+/* News & Contributions*/
+.content-section {
   display: flex;
-  gap: 10px; /* Espaciado entre los elementos */
-  align-items: center; /* Alinea verticalmente los elementos */
-  justify-content: center; /* Alinea los elementos horizontalmente */
+  flex-wrap: wrap;
 }
 
-.share-popup a, .share-popup button {
-  display: inline-flex; /* Asegura que los elementos se alineen correctamente */
-  align-items: center; /* Alinea los iconos verticalmente */
-  justify-content: center; /* Alinea los iconos horizontalmente */
-  width: 35px; /* Establece un tamaño fijo para cada icono */
-  height: 35px; /* Establece un tamaño fijo para cada icono */
-  padding: 0; /* Elimina el padding adicional */
-  margin: 0; /* Elimina el margen adicional */
-  border-radius: 50%; /* Hace que los botones sean circulares */
-  cursor: pointer; /* Cambia el cursor cuando se pasa por encima */
+/* Section title styling */
+.section-title {
+  font-size: 1.5rem;
+  font-style: italic;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-weight:lighter;
 }
 
-
-.copy-link {
-  width: 35px; /* Igual al tamaño de los otros iconos */
-  height: 35px; /* Igual al tamaño de los otros iconos */
-  display: inline-flex; /* Asegura el mismo comportamiento que los enlaces */
-  align-items: center;
-  justify-content: center;
-  background: none; /* Elimina el fondo del botón */
-  padding: 0; /* Elimina cualquier relleno extra */
-  margin: 0; /* Elimina cualquier margen extra */
-  cursor: pointer; /* Cursor pointer para interactividad */
+/* News cards */
+.news-card {
+  width: 100%; 
+  border: none;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  transition: transform 0.2s ease-in-out;
+}
+.news-card:hover {
+  transform: scale(1.01);
 }
 
-.copy-link i {
-  font-size: 1.2rem; /* Ajusta el tamaño del icono */
+.news-card .card-img-top {
+  height: 200px; 
+  object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 
-a.hashtag-link:hover {
-  color: black; /* o cualquier otro color llamativo */
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Contributions */
+.contribution-card {
+  border: none;
+  background-color: transparent;
+}
+
+.fakeability-score .label {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.fakeability-score .score {
+  font-size: 1.3rem;
+  color: #dc3545;
   font-weight: bold;
-  transition: all 0.3s ease-in;
-  text-decoration: underline;
+  margin-left: 0.5rem;
 }
+
+.fakeability-score .note {
+  font-size: 0.75rem;
+  font-style: italic

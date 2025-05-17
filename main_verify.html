@@ -37,8 +37,7 @@
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <!-- Navigation menu -->
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li><img src="Imags/logo v1.webp" width="50" height="95%" alt="Logo"></li>
-              <li><a href="main_homepage.html" class="nav-link px-3 inactive">Home</a></li>
+              <li><a href="/main_homepage.html"><img src="Imags/logo v1.webp" width="50" height="95%" alt="Logo"></a></li>
               <li><a href="main_news.html" class="nav-link px-3 inactive">News</a></li>
               <li><a href="main_verify.html" class="nav-link px-3 active">Verify</a></li>
               <li><a href="main_community.html" class="nav-link px-3 inactive">Community</a></li>
@@ -64,104 +63,108 @@
         </div>
       </header>
 
-    <!-- Container -->
-      <main class="upload container">
-        <div class="py-4 text-center">
-        <div class="upload-text text-center mb-4">
-          <h1 class="upload-title">Welcome to VerifAI</h1>
-          <p class="upload-description">
-            Our artificial intelligence tool will analyze the content you've submitted and cross-check it against thousands of similar documents in search of the truth.
-          </p>
-        </div>        
-        <div class="py-3 text-center">
-          <form id="upload-form" class="upload-form d-flex">
-            <input
-              type="text"
-              placeholder="Submit the content you want to verify"
-              class="upload-input"
-              id="urlInput"
-            />
-            <input type="file" id="fileInput" hidden />
-            <button type="submit" class="upload-btn">Submit</button>
-          </form>
+<!-- Upload Container -->
+    <main class="upload container">
+      <div class="py-4 text-center">
+        <div class="upload-wrapper mx-auto">
+          <div class="upload-text text-center py-3">
+            <h1 class="upload-title mb-4"> Welcome to VerifAI</h1>
+            <p class="upload-description py-2">
+              Our artificial intelligence tool will analyze your content detecting common patterns among thousands of audited misinformation news. 
+            </p>
+            <p class="upload-explanation mt-3">
+              Its detection algorithm is based on four key vectors: disinformation, source authority, sensationalism and context. The probability of matching one each of them assigns the content a score, out of 100 points, showing the potential intention of deception.                
+            </p>
+            <p class="upload-explanation mt-3">
+              The results are shared with trusted media to ease real-time fact-checking tasks, as well as with search engines and social media, keeping the content open and free to everyone.  
+            </p>
+          </div>
+          <div class="ulodad-container py-3">
+            <form id="upload-form" class="upload-form d-flex">
+              <input class="upload-input" id="urlInput" type="text" placeholder="Submit the content you want to verify"/>
+              <input type="file" id="fileInput" hidden />
+              <button class="upload-btn" type="submit">Submit</button>
+            </form>
           </div>    
-          <div id="analysis-output"></div>      
+          <div id="analysis-output"></div>
         </div>
-        
-      </main>
+      </div>
+
+      <!-- Last Verifications -->
+      <div class="py-4 d-flex justify-content-center">
+        <div class="position-sticky last-verifications-container">
+          <div>
+            <h5 class="fst-italic text-secondary">Last verifications</h4>
+            <ul class="list-unstyled">
+              <!-- Verification 1 -->
+              <li>
+                <a class="d-flex gap-3 align-items-start py-3 link-body-emphasis text-decoration-none border-top" href="main_community.html">
+                  <img src="Imags/andrea-cau-nV7GJmSq3zc-unsplash.jpg" class="verification-thumbnail rounded" alt="Thumbnail" />
+                  <div class="flex-grow-1">
+                    <h6 class="mb-1 fw-semibold">The ghost cities</h6>
+                    <p class="mb-1 text-muted small">by Pepito Perez · May 3, 2025</p>                    
+                    <div class="d-flex align-items-center">
+                      <span class="text-dark fw-bold small me-2">Feakability Score:</span>
+                      <span class="text-danger fw-bold fs-5 me-2">84%</span>
+                    </div>
+                    <div class="mt-1">
+                      <span class="badge bg-light text-muted fw-normal me-1">#Blackout</span>
+                      <span class="badge bg-light text-muted fw-normal me-1">#Disinformation</span>
+                      <span class="badge bg-light text-muted fw-normal me-1">#Government</span>
+                      <span class="badge bg-light text-muted fw-normal me-1">#Chemical</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <!-- Verification 2 -->              
+              <li>
+                <a class="d-flex gap-3 align-items-start py-3 link-body-emphasis text-decoration-none border-top" href="main_community.html">
+                  <img src="Imags/joao-tzanno-1NacmxqfPZA-unsplash.jpg" class="verification-thumbnail rounded" alt="Thumbnail" />
+                  <div class="flex-grow-1">
+                    <h6 class="mb-1 fw-semibold">The whatsapp monkey cult</h6>
+                    <p class="mb-1 text-muted small">by Jose Ramon de la Morena · Apr 17, 2025</p>                    
+                    <div class="d-flex align-items-center">
+                      <span class="text-dark fw-bold small me-2">Feakability Score:</span>
+                      <span class="text-danger fw-bold fs-5 me-2">91%</span>
+                    </div>
+                    <div class="mt-1">
+                      <span class="badge bg-light text-muted fw-normal me-1">#Whatsapp</span>
+                      <span class="badge bg-light text-muted fw-normal me-1">#Cult</span>
+                      <span class="badge bg-light text-muted fw-normal me-1">#Internet</span>
+                      <span class="badge bg-light text-muted fw-normal me-1">#Scam</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <!-- Verification 3 -->              
+              <li>
+                <a class="d-flex gap-3 align-items-start py-3 link-body-emphasis text-decoration-none border-top" href="main_community.html">
+                  <img src="Imags/andrea-cau-nV7GJmSq3zc-unsplash.jpg" class="verification-thumbnail rounded" alt="Thumbnail" />
+                  <div class="flex-grow-1">
+                    <h6 class="mb-1 fw-semibold">Secret sensors in smart home appliances</h6>
+                    <p class="mb-1 text-muted small">by Paquita del Barrio · Apr 7, 2025</p>                    
+                    <div class="d-flex align-items-center">
+                      <span class="text-dark fw-bold small me-2">Feakability Score:</span>
+                      <span class="text-danger fw-bold fs-5 me-2">78%</span>
+                    </div>
+                    <div class="mt-1">
+                      <span class="badge bg-light text-muted fw-normal me-1">#Technology</span>
+                      <span class="badge bg-light text-muted fw-normal me-1">#Surveillance</span>
+                      <span class="badge bg-light text-muted fw-normal me-1">#Data Capitalism</span>
+                      <span class="badge bg-light text-muted fw-normal me-1">#IOT</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Fake Analytics. All rights reserved.</p>
     </footer>
-
-    <!-- Submit file function -->
-    <script>
-      $(document).ready(function () {
-        $('#urlInput').on('click', function () {
-          $('#fileInput').trigger('click');
-        });
-    
-        $('#fileInput').on('change', function () {
-          $('#urlInput').val(this.files[0].name);
-        });
-      });
-    </script>
-  
-    <!-- Analysis function -->
-    <script>
-      $(document).ready(function () {
-        $('#upload-form').on('submit', function (e) {
-          e.preventDefault(); // Evita el envío real
-    
-          // Simulación de datos
-          const fileName = $('#urlInput').val() || 'uploaded-document.pdf';
-          const userName = 'JohnDoe';
-          const now = new Date();
-          const dateString = now.toLocaleDateString();
-          const timeString = now.toLocaleTimeString();
-    
-          // HTML del resultado
-          const resultHtml = `
-          <section class="analysis-result d-flex">
-            <div class="result-thumbnail">
-              <img src="Imags/ben-o-bro-wpU4veNGnHg-unsplash.jpg" alt="Document Thumbnail" />
-            </div>
-            <div class="result-content d-flex-column">
-              <div class="top-info">
-                <h2 class="result-title">${fileName}</h2>
-                <p class="result-meta">Uploaded by ${userName} · ${dateString} · ${timeString}</p>
-                <div class="fakeability-score">
-                  <span class="score-label">Fakeability Score:</span>
-                  <span class="score-value">82%</span>
-                </div>
-              </div>
-              <div class="indicators">
-                <div class="indicator">
-                  <strong>Disinformation:</strong> Some statements are not supported by credible evidence.
-                </div>
-                <div class="indicator">
-                  <strong>Source Authority:</strong> The source has low to moderate reliability.
-                </div>
-                <div class="indicator">
-                  <strong>Sensationalism:</strong> The language used is emotionally charged.
-                </div>
-                <div class="indicator">
-                  <strong>Context:</strong> Some quotes or data are taken out of context.
-                </div>
-              </div>
-            </div>
-          </section>
-
-          `;
-    
-          // Inyectar el resultado en el contenedor
-          $('#analysis-output').html(resultHtml);
-    
-          // Scroll suave al resultado
-          $('html, body').animate({
-            scrollTop: $('#analysis-output').offset().top - 50
-          }, 500);
-        });
-      });
-    </script>
-    
+</body>
+</html>

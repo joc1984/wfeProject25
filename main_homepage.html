@@ -37,8 +37,7 @@
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <!-- Navigation menu -->
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li><img src="Imags/logo v1.webp" width="50" height="95%" alt="Logo"></li>
-              <li><a href="main_homepage.html" class="nav-link px-3 active">Home</a></li>
+              <li><a href="/main_homepage.html"><img src="Imags/logo v1.webp" width="50" height="95%" alt="Logo"></a></li>
               <li><a href="main_news.html" class="nav-link px-3 inactive">News</a></li>
               <li><a href="main_verify.html" class="nav-link px-3 inactive">Verify</a></li>
               <li><a href="main_community.html" class="nav-link px-3 inactive">Community</a></li>
@@ -64,52 +63,206 @@
         </div>
       </header>
 
-    <!-- Container -->
-      <main class="container">
-        <div class="py-5 text-center">
-          <div id="carouselExampleCaptions" class="carousel slide">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <!-- Carousel -->
+    <main class="container-fluid px-0">
+      <div id="mainCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner carousel-img-wrapper">
+          <div class="carousel-item active">
+            <img src="Imags/obi-qXfD_nG4j-U-unsplash.jpg" class="carousel-img" alt="Slide 1">
+            <div class="carousel-caption carousel-caption-custom">
+              <h2>Fake News</h2>
+              <p>Stay up to date on the latest news in the misinformation landscape</p>
             </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="Imags/andrea-cau-nV7GJmSq3zc-unsplash.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Example 1</h5>
-                  <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="Imags/ben-o-bro-wpU4veNGnHg-unsplash.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Example 2</h5>
-                  <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="Imags/pedro-lastra-Nyvq2juw4_o-unsplash.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Example 3</h5>
-                  <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
           </div>
+          <div class="carousel-item">
+            <img src="Imags/emily-morter-8xAA0f9yQnE-unsplash.jpg" class="carousel-img" alt="Slide 2">
+            <div class="carousel-caption carousel-caption-custom">
+              <h2>Verify Your Content</h2>
+              <p>Submit your content to discover the truth</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="Imags/jonny-gios-SqjhKY9877M-unsplash.jpg" class="carousel-img" alt="Slide 3">
+            <div class="carousel-caption carousel-caption-custom">
+              <h2>Join the Community</h2>
+              <p>Share your findings and interact with other researchers</p>
+            </div>
           </div>
         </div>
-      </main>
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Fake Analytics. All rights reserved.</p>
-    </footer>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div> 
+    </main>
+
+
+    <!-- Latest news -->
+    <div class="row content-section container-fluid py-5">
+      <div class="col-lg-7 px-4">
+        <h2 class="section-title">Latest News</h2>
+      <div class="d-flex flex-column gap-4">
+
+        <div class="card news-card">
+          <div class="image-container">
+            <img src="Imags/ricardo-iv-tamayo-ZFqr-DgI-jU-unsplash.jpg" class="card-img-top" alt="Veracity Blackout">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">A Veracity Blackout</h5>
+            <p class="card-text text-muted small">April 29, 2025</p>
+            <p class="card-text">The blackout in the Iberian Peninsula brought a wave of misinformation, exploiting a national emergency to spread uncertainty.</p>
+            <a href="/con_Article1.html" class="btn btn-outline-primary btn-sm">Keep reading</a>
+          </div>
+        </div>
+              
+        <div class="card news-card">
+          <div class="image-container">
+            <img src="Imags/ryoji-iwata-_dVxl4eE1rk-unsplash.jpg" class="card-img-top" alt="Veracity Blackout">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Drowning on information</h5>
+            <p class="card-text text-muted small">April 29, 2025</p>
+            <p class="card-text">The DANA catastrophe opened the gates for partisan disinformation during moments of real tragedy.</p>
+            <a href="/con_Article2.html" class="btn btn-outline-primary btn-sm">Keep reading</a>
+          </div>
+        </div>
+
+      </div>
+      </div>
+
+  <!-- Latest Contributions -->
+  <div class="col-lg-5 px-4">
+    <h2 class="section-title">Latest Contributions</h2>
+    <div id="post-feed">
+
+      <div class="card contribution-card mb-4">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <a href="/community/the-ghost-cities">
+              <img src="Imags/andrea-cau-nV7GJmSq3zc-unsplash.jpg" class="img-fluid rounded" alt="Thumbnail">
+            </a>
+          </div>
+            <div class="col-md-8">
+              <h5 class="card-title">
+                <a href="/community/the-ghost-cities" class="text-decoration-none text-dark">The ghost cities</a>
+              </h5>
+              <p class="card-text mb-2"> May 3, 2025 </p>
+              <h6 class="fakeability-score">
+                <span class="text-dark">Fakeability Score:</span>
+                <span class="score">84%</span>
+              </h6>
+            </div>
+        </div>
+        </div>
+
+        <div class="card contribution-card mb-4">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <a href="/community/the-whatsapp-monkey-cult">
+                <img src="Imags/joao-tzanno-1NacmxqfPZA-unsplash.jpg" class="img-fluid rounded" alt="Thumbnail">
+              </a>
+            </div>
+            <div class="col-md-8">
+              <h5 class="card-title">
+                <a href="/community/the-whatsapp-monkey-cult" class="text-decoration-none text-dark">The whatsapp monkey cult</a>
+              </h5>
+              <p class="card-text mb-2"> Apr 17, 2025 </p>
+              <h6 class="fakeability-score">
+                <span class="text-dark">Fakeability Score:</span>
+                <span class="score">91%</span>
+              </h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="card contribution-card mb-4">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <a href="/community/secret-sensors-in-smart-home-appliances">
+                <img src="Imags/andrea-cau-nV7GJmSq3zc-unsplash.jpg" class="img-fluid rounded" alt="Thumbnail">
+              </a>
+            </div>
+            <div class="col-md-8">
+              <h5 class="card-title">
+                <a href="/community/secret-sensors-in-smart-home-appliances" class="text-decoration-none text-dark">Secret sensors in smart home appliances</a>
+              </h5>
+              <p class="card-text mb-2"> Apr 7, 2025 </p>
+              <h6 class="fakeability-score">
+                <span class="text-dark">Fakeability Score:</span>
+                <span class="score">78%</span>
+              </h6>
+            </div>
+          </div>
+        </div>      
+     
+      </div>
+    </div>
+  </div>
+
+ <!-- Newsletter -->
+    <div class="bg-transparent p-5 rounded text-center">
+      <h4 class="mb-3">Don't forget to subscribe to our newsletter</h4>
+      <p>Subscribe to our newsletter and receive the latest updates directly in your email.</p>
+      <form id="newsletterForm" class="row justify-content-center g-2">
+        <div class="col-md-5">
+          <input type="email" class="form-control" id="newsletterEmail" placeholder="Send your email" required>
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-warning">Subscribe</button>
+        </div>
+      </form>
+    </div>
+
+  <!-- Newsletters Modal -->
+  <div class="modal fade" id="subscriptionModal" tabindex="-1" aria-labelledby="subscriptionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center">
+        <div class="modal-header">
+          <h5 class="modal-title" id="subscriptionModalLabel">Subscription Confirmed</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          Thank you for subscribing! You’ll now receive updates in your inbox.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="duplicateModal" tabindex="-1" aria-labelledby="duplicateModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center">
+        <div class="modal-header">
+          <h5 class="modal-title" id="duplicateModalLabel">Already Subscribed</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          This email is already subscribed.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+      <p>&copy; 2025 Fake Analytics. All rights reserved.</p>
+  </footer>
+
 </body>
+</html>
