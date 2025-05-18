@@ -39,12 +39,12 @@
     <div class="custom-modal-body">
       <form>
         <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" required>
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" class="form-control" required>
         </div>
         <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" required>
+          <label for="password" class="form-label">Password</label>
+          <input type="password" id="password" class="form-control" required>
         </div>
         <button type="submit" class="login-button">Submit</button>
       <div class="login-links">
@@ -58,32 +58,61 @@
 </html>
 
 <script>
+
+    // Closing login form
+   document.addEventListener("DOMContentLoaded", function () {
+   const closeBtn = document.querySelector(".custom-close-btn");
+    if (closeBtn) {
+     closeBtn.addEventListener("click", function () {
+       window.location.href = "/main_homepage.html";
+     });
+   }
+  });
+
+  // Existing users search in localStorage
   document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector(".custom-modal-body form");
-    
     form.addEventListener("submit", function (e) {
-      e.preventDefault(); // Evita el envío real del formulario
+      e.preventDefault();
+
+      const oldError = document.getElementById("login-error");
+      if (oldError) oldError.remove();
 
       const email = document.getElementById("email").value;
       const password = document.getElementById("password").value;
 
-      // Guardar en Local Storage
-      localStorage.setItem("userEmail", email);
-      localStorage.setItem("userPassword", password);
+      const users = JSON.parse(localStorage.getItem("users")) || [];
 
-      // Reemplazar el formulario con un mensaje de confirmación
-      const modalBody = document.querySelector(".custom-modal-body");
-      modalBody.innerHTML = `
-        <div class="alert" role="alert">
-          Login successful! You will be redirected shortly...
-        </div>
-      `;
+      const user = users.find(u => u.email === email);
 
-      // Redirigir después de 2 segundos
-      setTimeout(() => {
-        history.back(); // Volver a la página anterior
-      }, 2000);
+      if (!user) {
+        insertLoginError("No user found with that email.");
+        return;
+      }
+
+      // User credentials match
+      if (user.password === password) {
+        const modalBody = document.querySelector(".custom-modal-body");
+        modalBody.innerHTML = `
+          <div class="alert-yellow" role="alert">
+            Login successful! You will be redirected shortly...
+          </div>
+        `;
+        setTimeout(() => {
+        window.location.href = "/main_homepage.html";
+        }, 2000);
+      } else {
+        insertLoginError("Incorrect password. Please try again.");
+      }
     });
+
+    function insertLoginError(message) {
+      const passwordField = document.getElementById("password");
+      const errorDiv = document.createElement("div");
+      errorDiv.id = "login-error";
+      errorDiv.className = "text-danger mb-2";
+      errorDiv.textContent = message;
+      passwordField.parentNode.insertBefore(errorDiv, passwordField);
+    }
   });
 </script>
-

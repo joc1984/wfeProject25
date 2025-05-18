@@ -71,6 +71,13 @@ footer {
     background-color: #e0a800; 
 }
 
+.alert-yellow {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 1rem;
+  border-radius: 0.375rem;
+}
+
 /* Verify Uploading */
 .upload-container {
     display: flex;

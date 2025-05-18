@@ -36,15 +36,15 @@
       <h5 class="custom-modal-title" id="loginModalLabel">Sign up for free</h5>
       <button type="button" class="custom-close-btn" data-bs-dismiss="modal" aria-label="Close">×</button>
     </div>
-    <div class="custom-modal-body">
+    <div class="custom-signup-body">
       <form>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" required>
+        <div class="form-group mb-3">
+          <label for="signup-email" class="form-label">Email</label>
+          <input type="email" id="signup-email" class="form-control" required>
         </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" required>
+        <div class="form-group mb-3">
+          <label for="signup-password" class="form-label">Password</label>
+          <input type="password" id="signup-password" class="form-control" required>
         </div>
         <button type="submit" class="login-button">Submit</button>
       </form>
@@ -58,32 +58,79 @@
 </html>
 
 <script>
+  // Closing login form
+   document.addEventListener("DOMContentLoaded", function () {
+   const closeBtn = document.querySelector(".custom-close-btn");
+    if (closeBtn) {
+     closeBtn.addEventListener("click", function () {
+       window.location.href = "/main_homepage.html";
+     });
+   }
+  });
+  
+  // Existing users search in localStorage
   document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector(".custom-modal-body form");
-    
-    form.addEventListener("submit", function (e) {
-      e.preventDefault(); // Evita el envío real del formulario
+    const signupForm = document.querySelector(".custom-signup-body form");
 
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
+    if (!signupForm) {
+      console.error("Signup form not found!");
+      return;
+    }
 
-      // Guardar en Local Storage
-      localStorage.setItem("userEmail", email);
-      localStorage.setItem("userPassword", password);
+    signupForm.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-      // Reemplazar el formulario con un mensaje de confirmación
-      const modalBody = document.querySelector(".custom-modal-body");
-      modalBody.innerHTML = `
-        <div class="alert" role="alert">
-          Login successful! You will be redirected shortly...
+      const oldError = document.getElementById("signup-error");
+      if (oldError) oldError.remove();
+
+      const emailInput = document.getElementById("signup-email");
+      const passwordInput = document.getElementById("signup-password");
+
+      const email = emailInput.value.trim();
+      const password = passwordInput.value;
+
+      if (!email || !password) {
+        insertSignupError("Email and password are required.");
+        return;
+      }
+
+      let users = [];
+      try {
+        users = JSON.parse(localStorage.getItem("users")) || [];
+      } catch (err) {
+        console.error("Error parsing users from localStorage", err);
+      }
+
+      const userExists = users.some(user => user.email === email);
+      if (userExists) {
+        insertSignupError("An account with this email already exists.");
+        return;
+      }
+
+      users.push({ email, password });
+      localStorage.setItem("users", JSON.stringify(users));
+
+      // New user creation
+      const formContainer = document.querySelector(".custom-signup-body");
+      formContainer.innerHTML = `
+        <div class="alert-yellow" role="alert">
+          Account created successfully!
         </div>
       `;
 
-      // Redirigir después de 2 segundos
       setTimeout(() => {
-        history.back(); // Volver a la página anterior
+        window.location.href = "/log_SignIn.html";
       }, 2000);
     });
+
+    function insertSignupError(message) {
+      const emailField = document.getElementById("signup-email");
+      const errorDiv = document.createElement("div");
+      errorDiv.id = "signup-error";
+      errorDiv.className = "text-danger mb-2";
+      errorDiv.textContent = message;
+      emailField.parentNode.insertBefore(errorDiv, emailField);
+    }
   });
 </script>
 
